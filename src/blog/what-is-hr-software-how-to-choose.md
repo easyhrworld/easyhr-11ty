@@ -4,12 +4,12 @@ description: We evaluate the best 5 payroll software in India and how to choose 
 date: 2022-09-23
 featureImage: /assets/images/blog/hr-software-scaled.webp
 category:
-    - Payroll Software
-    - HR Software
+    - "HR Software"
 tags:
-    - best payroll software
-    - hr software
-    - posts
+    - "Best HR Software"
+    - "Choose HR Software"
+    - "hr-software"
+    - "posts"
 ---
 
 ## What is HR Software?
