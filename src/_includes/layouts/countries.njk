@@ -1,0 +1,112 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+    <!-- Hero Start -->
+        <section class="bg-half bg-light d-table w-100" style="background: url('{{ backgroundUrl }}') top center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12 text-center">
+                        <div class="page-next-level">
+                            <h4 class="title"> {{ title }} </h4>
+                            <div class="page-next">
+                                <nav aria-label="breadcrumb" class="d-inline-block">
+                                    <ul class="breadcrumb bg-white rounded shadow mb-0">
+                                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div> <!--end container-->
+        </section><!--end section-->
+        <!-- Hero End -->
+
+        <!-- Shape Start -->
+        <div class="position-relative">
+            <div class="shape overflow-hidden text-white">
+                <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+        <!--Shape End-->
+
+        <!-- Feature Start -->
+        <section class="section">
+            <div class="container mt-60">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-md-12 order-1 order-md-1 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                        {{ content | safe }}
+                    </div><!--end col-->
+
+                    <div class="col-lg-5 col-md-12 order-2 order-md-2">
+                        
+                        <div class="card rounded border-0 ms-lg-5">
+                            <img loading="lazy" class="center img-fluid" src="/assets/images/illustrator/development.svg" width=250 height=400 alt="Get in touch">
+                            <div class="card-body">
+                                <h5 class="text-center">Get in touch</h5>
+                                <div class="content mt-1 pt-2">
+                                    <form name="country-contact-callback" data-netlify="true" action="/success/" netlify>
+                                        <input type="hidden" name="subject" value="Signup request">
+                                        <input type="hidden" name="country" value="{{name}}">
+
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Name : <span class="text-danger">*</span></label>
+                                                    <div class="form-icon position-relative">
+                                                        <i data-feather="user" class="fea icon-sm icons"></i>
+                                                        <input type="text" class="form-control ps-5" placeholder="Name" name="name" required>
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
+
+                                            <div class="col-lg-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Email : <span class="text-danger">*</span></label>
+                                                    <div class="form-icon position-relative">
+                                                        <i data-feather="mail" class="fea icon-sm icons"></i>
+                                                        <input type="email" class="form-control ps-5" placeholder="Email" name="email" required>
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
+
+                                            <div class="col-lg-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Company : <span class="text-danger">*</span></label>
+                                                    <div class="form-icon position-relative">
+                                                        <i data-feather="mail" class="fea icon-sm icons"></i>
+                                                        <input type="text" class="form-control ps-5" placeholder="Company" name="company" required>
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
+
+                                            <div class="col-lg-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Phone : <span class="text-danger">*</span></label>
+                                                    <div class="form-icon position-relative">
+                                                        <i data-feather="mail" class="fea icon-sm icons"></i>
+                                                        <input type="tel" class="form-control ps-5" placeholder="Phone" name="phone" required>
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
+
+                                            <div class="col-lg-12 mt-2 mb-0">
+                                                <div class="d-grid">
+                                                    <button class="btn btn-primary" type="submit" onClick="gtag('event', 'country_contact', {"country":"{{name}}"});">Send</button>
+                                                </div>
+                                            </div><!--end col-->
+                                        </div>
+                                    </form>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+            
+        </section>
+    
+{% endblock %}

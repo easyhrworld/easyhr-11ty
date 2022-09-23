@@ -1,0 +1,62 @@
+<!-- START SIDEBAR -->
+<div class="col-lg-4 col-md-6 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+    <div class="card border-0 sidebar sticky-bar rounded shadow">
+        <div class="card-body">
+            <!-- SEARCH -->
+            <div class="widget">
+                <form role="search" method="get">
+                    <div class="input-group mb-3 border rounded">
+                        <input type="text" id="s" name="s" class="form-control border-0" placeholder="Search Keywords...">
+                        <button type="submit" class="input-group-text bg-transparent border-0" id="searchsubmit"><i class="uil uil-search"></i></button>
+                    </div>
+                </form>
+            </div>
+            <!-- SEARCH -->
+
+            <!-- Categories -->
+            <div class="widget mb-4 pb-2">
+                <h5 class="widget-title">Categories</h5>
+                <ul class="list-unstyled mt-4 mb-0 blog-categories">
+                    {% for category in collections.blogCategories %}
+                        <li><a href="/category/{{ category.slug }}">{{ category.title | capitalize }}</a>  <span class="float-end">{{ category.count }}</span> </li>
+                    {% endfor %}                    
+                </ul>
+            </div>
+            <!-- Categories -->
+
+            <!-- RECENT POST -->
+            <div class="widget mb-4 pb-2">
+                <h5 class="widget-title">Recent Post</h5>
+                <div class="mt-4">
+                    {% for post in collections.posts | reverse %}
+                        {% if loop.index0 < 3 %}
+                            <div class="clearfix post-recent">
+                                <div class="post-recent-thumb float-start"> <a href="{{post.url}}"> <img loading="lazy" alt="img" src="{{post.data.featureImage}}" width=65 height=50 class="img-fluid rounded"></a></div>
+                                <div class="post-recent-content float-start"><a href="{{post.url}}">{{post.data.title | truncate(40)}}</a><span class="text-muted mt-2">{{post.date | readableDate}}</span></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- RECENT POST -->
+
+            <div class="widget mb-4 pb-2">
+                <a href="/blog/feed.xml" class="btn btn-outline-warning">Subscribe to our feed</a>
+            </div>
+
+            <!-- TAG CLOUDS -->
+            <div class="widget mb-4 pb-2">
+                <h5 class="widget-title">Tags Cloud</h5>
+                <div class="tagcloud mt-4">
+                    {% for tag in collections.blogTags %}
+                        <a href="/tags/{{ tag.slug }}" class="rounded">{{ tag.title | capitalize }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- TAG CLOUDS -->
+            
+            {% include "components/social.njk" %}
+        </div>
+    </div>
+</div><!--end col-->
+<!-- END SIDEBAR -->

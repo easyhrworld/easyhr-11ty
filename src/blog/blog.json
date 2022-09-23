@@ -1,0 +1,5 @@
+{
+    "layout": "layouts/posts.njk",
+    "author": "Kanhai Chhugani",
+    "featureImage": "/assets/images/blog/01.jpg"
+}

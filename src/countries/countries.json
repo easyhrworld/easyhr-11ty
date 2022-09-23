@@ -1,0 +1,5 @@
+{
+    "tags": "countries",
+    "layout": "layouts/countries.njk",
+    "permalink": "/countries/{{ title.toLowerCase() | slug }}/"
+}

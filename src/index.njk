@@ -1,0 +1,270 @@
+---
+layout: "layouts/base.njk"
+description: "India's Leading HR Payroll Software loved accross various industries in India. EasyHR is the very user friendly and intutive cloud based HRMS"
+heroline: Premium HR Solution For SME's and Enterprises
+subtitle: Successfully move your employee information from spreadsheets to an easy to use HR software and do more with your time.
+changeFreq: weekly
+---
+
+<!-- Hero Start -->
+<section
+  class="bg-marketing d-table w-100"
+  style="background: url('/assets/images/home/marketing-shape.png')"
+  id="home"
+>
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-7 col-md-7 text-center">
+        <img
+          src="/assets/images/home/marketing.png"
+          class="img-fluid"
+          style="max-height: 400px"
+          alt="EasyHR Home Page Image"
+          height="400px"
+        />
+
+        <div class="title-heading mt-0 mt-md-5 mt-4 mt-sm-0 pt-2 pt-sm-0">
+          <h1 class="heading mb-3">
+            {{ heroline }}
+          </h1>
+          <p class="para-desc text-muted">
+            {{ subtitle }}
+          </p>
+          <div class="mt-4 pt-2">
+            <a href="/demo/" class="btn btn-primary mt-2 me-2"
+              >Get Started</a
+            >
+            <a href="/free-trial/" class="btn btn-outline-primary mt-2"
+              ><i class="mdi mdi-phone"></i> Free Trial</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end row-->
+  </div>
+  <!--end container-->
+</section>
+<!--end section-->
+<!-- Hero End -->
+
+{% include "components/partners.njk" %}
+
+<!-- Feature Start -->
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center">
+        <div class="section-title mb-4 pb-2">
+          <h4 class="title mb-4">What We Provide</h4>
+          <p class="text-muted para-desc mx-auto mb-0">
+            Start working with
+            <span class="text-primary fw-bold">EasyHR</span> that can provide
+            everything you need to effectively manage and connect with your
+            employees.
+          </p>
+        </div>
+      </div>
+      <!--end col-->
+    </div>
+    <!--end row-->
+
+    <div class="row">
+
+      {% for feature in collections.features %}
+
+        {% if feature.data.showOnHomePage %}
+
+          <div class="col-md-4 col-12 mt-5">
+            <div class="features text-center">
+              <div class="image position-relative d-inline-block">
+                <span
+                  class="iconify"
+                  data-icon="ic:baseline-home-repair-service"
+                  data-inline="false"
+                ></span>
+                <i class="uil uil-{{ feature.data.icon }} h1 text-primary"></i>
+              </div>
+
+              <div class="content mt-4">
+                <h5><a href="{{feature.url}}">{{feature.data.title}}</a></h5>
+                <p class="text-muted mb-0">
+                  {{feature.data.description}}
+                </p>
+              </div>
+              <div class="text-center m-3"><a href="{{feature.url}}" class="primary">{{feature.data.title}} Details</a></div>
+              
+            </div>
+          </div>
+          <!--end col-->
+          
+        {% endif %}
+        
+      {% endfor %}
+
+      <div class="col-12 mt-4 pt-2 text-center">
+        <a href="/features/" class="btn btn-primary"
+          >Explore Features <i class="uil uil-angle-right align-middle"></i
+        ></a>
+      </div>
+      <!--end col-->
+    </div>
+    <!--end row-->
+  </div>
+  <!--end container-->
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-md-6">
+              <img src="assets/images/illustrator/analyze_report_4.svg" class="me-md-4" alt="" loading="lazy">
+          </div><!--end col-->
+
+          <div class="col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+              <div class="section-title ms-lg-5">
+                  <h4 class="title mb-4">HCM Software for any industry</h4>
+                  <p class="text-muted">Find out more about EasyHR’s dedicated industry-based HCM software, built to help enterprise &amp; SME manage their Human Resources better and grow faster.</p>
+                  <a href="/free-trial/" class="btn btn-primary">Start A Free Trial<i class="uil uil-angle-right-b"></i></a>
+              </div>
+          </div><!--end col-->
+      </div><!--end row-->
+  </div><!--end container-->
+
+</section> 
+
+{% include "components/testimonials.njk" %}
+
+<!-- Faq Start -->
+<section class="section">
+
+  <div class="container">
+    <div class="row" id="counter">
+      <div class="col-md-3 col-6 mt-4 pt-2">
+        <div class="counter-box text-center">
+          <img
+            src="/assets/images/illustrator/Asset190.svg"
+            class="avatar avatar-small"
+            alt=""
+            loading="lazy"
+          />
+          <h2 class="mb-0 mt-4">
+            <span class="counter-value" data-target="300000"></span>+
+          </h2>
+          <h6 class="counter-head text-muted">Happy Employees</h6>
+        </div>
+        <!--end counter box-->
+      </div>
+
+      <div class="col-md-3 col-6 mt-4 pt-2">
+        <div class="counter-box text-center">
+          <img
+            src="/assets/images/illustrator/Asset189.svg"
+            class="avatar avatar-small"
+            alt=""
+            loading="lazy"
+          />
+          <h2 class="mb-0 mt-4">
+            <span class="counter-value" data-target="22"></span>+
+          </h2>
+          <h6 class="counter-head text-muted">Modules</h6>
+        </div>
+        <!--end counter box-->
+      </div>
+
+      <div class="col-md-3 col-6 mt-4 pt-2">
+        <div class="counter-box text-center">
+          <img
+            src="/assets/images/illustrator/Asset192.svg"
+            class="avatar avatar-small"
+            alt=""
+            loading="lazy"
+          />
+          <h2 class="mb-0 mt-4">
+            <span class="counter-value" data-target="2">0</span>K+
+          </h2>
+          <h6 class="counter-head text-muted">Companies</h6>
+        </div>
+        <!--end counter box-->
+      </div>
+
+      <div class="col-md-3 col-6 mt-4 pt-2">
+        <div class="counter-box text-center">
+          <img
+            src="/assets/images/illustrator/Asset187.svg"
+            class="avatar avatar-small"
+            alt=""
+            loading="lazy"
+          />
+          <h2 class="mb-0 mt-4">
+            <span class="counter-value" data-target="100"></span>%
+          </h2>
+          <h6 class="counter-head text-muted">Ease of use</h6>
+        </div>
+        <!--end counter box-->
+      </div>
+    </div>
+    <!--end row-->
+  </div>
+  <!--end container-->
+
+  <div class="container mt-100 mt-60">
+    <div class="row align-items-center">
+      <div class="col-lg-12 text-center">
+        <div class="section-title ">
+          <h4 class="display-3 mb-4">What Your Business Actually <span class="fw-bold">Needs</span> Today?</h4>
+        </div>
+      </div>
+      <!--end col-->
+    </div>
+    <!--end row-->
+    
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+            <div class="card bg-light rounded shadow border-0">
+                <div class="card-body py-5">
+                    
+                    <div class="mt-2">
+                      <h5 class="card-title"> <i class="uil uil-mobile-android h1 text-primary"></i> Mobile First </h5>
+                        
+                    </div>
+                </div>
+            </div>
+        </div><!--end col-->
+
+        <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+            <div class="card bg-light rounded shadow border-0">
+                <div class="card-body py-5">
+                    <div class="mt-2">
+                    
+                        <h5 class="card-title"> <i class="uil uil-shield h1 text-primary"></i> Safe & Secure</h5>
+                    </div>
+                </div>
+            </div>
+        </div><!--end col-->
+
+        <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+            <div class="card bg-light rounded shadow border-0">
+                <div class="card-body py-5">
+                    <div class="mt-2">
+                        <h5 class="card-title"> <i class="uil uil-exchange h1 text-primary"></i> AI Embedded​</h5>
+                    </div>
+                </div>
+            </div>
+        </div><!--end col-->
+    </div><!--end row-->
+
+  </div>
+  <!--end container-->
+
+  <div class="container mt-100 mt-60">
+    <h3 class=" mb-4 text-center">Recent Posts</h3>
+    {% include "components/recent-posts.njk" %}
+  </div>
+
+  
+</section>
+<!--end section-->
+<!-- Faq End -->
+
+{% include "components/getting-started-form.njk" %}

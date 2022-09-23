@@ -1,0 +1,89 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<!-- Hero Start -->
+<section class="bg-half bg-light d-table w-100" style="background: url('{{ settings.featurebackgroundUrl }}') center center; ">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 text-center">
+                <div class="page-next-level">
+                    <h4 class="display-3 text-primary"> {{ title }} </h4>
+                    <div class="page-next">
+                        <nav aria-label="breadcrumb" class="d-inline-block">
+                            <ul class="breadcrumb bg-white rounded shadow mb-0">
+                                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/features/">Features</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div> <!--end container-->
+</section><!--end section-->
+<!-- Hero End -->
+
+<!-- Shape Start -->
+<div class="position-relative">
+    <div class="shape overflow-hidden text-white">
+        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+        </svg>
+    </div>
+</div>
+<!--Shape End-->
+
+<!-- Feature Start -->
+<section class="section">
+    <div class="container content">
+        <div class="row">
+            <div class="col-lg-3 col-12 mt-4 mt-lg-0 pt-2 pt-lg-0">
+                <div class="card border-0 sidebar sticky-bar rounded shadow bg-light">
+                    <div class="card-body">
+                        <h5 class="widget-title">Features</h5>
+                        <!-- Features -->
+                        <div class="widget mb-3 pb-2">
+                            
+                            <ul class="list-unstyled mt-4 mb-0 blog-categories">
+                                {% for feature in collections.features %}
+                                    <li><a href="{{ feature.url }}">{{ feature.data.title }} </a> </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <!-- Features -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-12 mt-5 mt-lg-3 pt-2 pt-lg-2">
+                {% if  header %}
+                <div class="container">
+                    <p>{{ header}}</p>
+                </div>
+                {% endif %}
+
+                <div class="container">
+                    {% for detail in  details %}
+                        <div class="row align-items-center {% if not loop.first or (loop.first and header) %} mt-100 {% endif %}">
+                            <div class="col-md-6 {% if loop.index % 2 ==0 %} order-1 order-md-2 {% else %} order-2 order-md-1 {% endif %} mt-4 mt-sm-0 pt-2 pt-sm-0">
+                                <div class="section-title me-lg-5">
+                                    <h4 class="title mb-4">{{ detail.title }}</h4>
+                                    <p class="text-muted"> {{ detail.description }} </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 {% if loop.index % 2 ==0 %} order-2 order-md-1 {% else %} order-1 order-md-2 {% endif %} ">
+                                <img loading="lazy" src="{{ detail.image }}" class="img-fluid" alt="{{ detail.title }}">
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+                        
+    </div><!--end container-->
+    
+</section>
+
+{% include "components/getting-started-form.njk" %}
+
+{% endblock %}

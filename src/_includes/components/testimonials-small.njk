@@ -1,0 +1,27 @@
+<!-- Testi Start -->
+
+<div class="container my-3">
+    <div class="row justify-content-center">
+        <div class="col-lg-9 mt-4 pt-2 text-center">
+            <div class="tiny-single-item">
+                {% for testimonial in collections.testimonials %}
+                {% if testimonial.data.showOnHome %}
+                <div class="tiny-slide client-testi text-center">
+                    <p class="text-muted h6 fst-italic">{{ testimonial.templateContent | safe}}</p>
+                    <img src="{{ testimonial.data.image }}" class="img-fluid avatar avatar-small mt-3 rounded-circle mx-auto shadow" alt="{{ testimonial.data.name }}">
+                    <ul class="list-unstyled mb-0 mt-3">
+                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                        <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                    </ul>
+                    <h6 class="text-primary">- {{ testimonial.data.name }} <small class="text-muted"> {{ testimonial.data.designation }} at {{ testimonial.data.company }} </small></h6>
+                </div><!--end customer testi-->
+                {% endif %}
+                {% endfor %}
+            </div><!--end owl carousel-->
+        </div><!--end col-->
+    </div><!--end row-->
+</div><!--end container-->
+<!-- Testi End -->

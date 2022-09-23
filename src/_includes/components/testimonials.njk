@@ -1,0 +1,38 @@
+<!-- Testimonial Start -->
+<section class="section" style="background: url('/assets/images/bg/1.jpg') center center;">
+    <div class="bg-overlay"></div>
+      <div class="container">
+        <div class="row py-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="tiny-single-item">
+              {% for testimonial in collections.testimonials %}
+                {% if testimonial.data.showOnHome %}
+                    <div class="tiny-slide client-testi text-center">
+                        <img loading="lazy" src="{{ testimonial.data.image }}" class="img-fluid avatar avatar-small rounded-circle mx-auto shadow" alt="{{ testimonial.data.name }}">
+                        <div class="text-light para-dark h5 fw-normal fst-italic mt-4">{{ testimonial.templateContent | safe}}</div>
+                        <ul class="list-unstyled mb-0">
+                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                            <li class="list-inline-item"><i class="mdi mdi-star text-warning"></i></li>
+                        </ul>
+                        <h6 class="text-light title-dark"> {{ testimonial.data.name }} {{ testimonial.data.designation }} at {{ testimonial.data.company }} </h6>
+                    </div>
+                {% endif %}
+              {% endfor %}
+        </div><!--end row-->
+    </div><!--end container-->
+</section><!--end section-->
+
+<!-- Shape Start -->
+<div class="position-relative">
+    <div class="shape overflow-hidden text-white">
+        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+        </svg>
+    </div>
+</div>
+<!--Shape End-->
+
+<!-- Testimonial End -->

@@ -1,0 +1,69 @@
+<!-- Navbar STart -->
+<header id="topnav" class="defaultscroll sticky">
+    <div class="container">
+        <!-- Logo container-->
+        <a class="logo" href="/">
+            <img src="/assets/images/logo.png" height="48" class="logo-light-mode" alt="Logo">
+            <img src="/assets/images/logo.png" height="48" class="logo-dark-mode" alt="Logo">
+        </a>
+        <div class="buy-button">
+            <a href="/free-trial/" class="btn btn-primary">Free Trial</a>
+        </div><!--end login button-->
+        <!-- End Logo container-->
+        <div class="menu-extras">
+            <div class="menu-item">
+                <!-- Mobile menu toggle-->
+                <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+                <!-- End mobile menu toggle-->
+            </div>
+        </div>
+
+        <div id="navigation">
+            <!-- Navigation Menu-->   
+            <ul class="navigation-menu">
+                <li><a href="/" class="sub-menu-item">Home</a></li>
+                <li class="has-submenu parent-parent-menu-item">
+                    <a href="javascript:void(0)">Features</a><span class="menu-arrow"></span>
+                    <ul class="submenu">
+                        <li>
+                            <ul>
+                                {% for feature in collections.features %}
+                                    {% if feature.data.showOnMenu %}
+                                        <li><a href="{{ feature.url }}" class="sub-menu-item">{{feature.data.title}}</a></li>    
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </li>
+
+                <li><a href="/pricing/" class="sub-menu-item">Pricing</a></li>
+                <li><a href="/blog/" class="sub-menu-item">Blog</a></li>
+                <li class="has-submenu parent-parent-menu-item">
+                    <a href="javascript:void(0)">Company</a><span class="menu-arrow"></span>
+                    <ul class="submenu">
+                        <li>
+                            <ul>
+                                <li><a href="/company/contact/" class="sub-menu-item">Contact</a></li>
+                                <li><a href="/company/about/" class="sub-menu-item">About</a></li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </li>
+
+            </ul><!--end navigation menu-->
+            <div class="buy-menu-btn d-none">
+                <a href="/free-trial/" class="btn-primary">Free-Trial</a>
+            </div><!--end login button-->
+        </div><!--end navigation-->
+    </div><!--end container-->
+</header><!--end header-->
+<!-- Navbar End -->

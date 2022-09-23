@@ -1,0 +1,6 @@
+{
+    "tags": "cities",
+    "layout": "layouts/cities.njk",
+    "backgroundUrl": "/assets/images/cities/indian-city.jpg",
+    "permalink": "/cities/{{ title.toLowerCase() | slug }}/"
+}

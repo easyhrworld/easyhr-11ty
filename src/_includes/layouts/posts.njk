@@ -1,0 +1,36 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+
+<!-- Blog STart -->
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <!-- BLog Start -->
+            <div class="col-lg-8 col-md-6">
+                <div class="card blog blog-detail border-0 shadow rounded">
+                    <img loading="lazy" src="{{featureImage}}" class="img-fluid rounded-top" alt="{{title}}">
+                    <div class="card-body content">
+                        <h1 class="mb-2">{{title}}</h1>
+                        <h6><i class="mdi mdi-tag text-primary me-1 mb-2"></i>
+                            {% for category in categories %}
+                                <a href="/blog/category/{{ category | slug }}" class="text-primary">{{category | capitalize}}</a> {% if not loop.last %}, {% endif %}
+                            {% endfor %}
+                        </h6>
+                        
+                        {{ content | safe }}
+                    </div>
+                </div>
+
+                {% include "components/prev-next-posts.njk" %}
+
+                {% include "components/getting-started-form.njk" %}
+            </div>
+            <!-- BLog End -->
+
+            {% include "components/sidebar.njk" %}
+        </div><!--end row-->
+    </div><!--end container-->
+</section><!--end section-->
+<!-- Blog End -->
+{% endblock %}

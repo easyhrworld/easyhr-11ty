@@ -1,0 +1,156 @@
+
+<!-- Footer Start -->
+<footer class="footer bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-12 mb-0 mb-md-4 pb-0 pb-md-2">
+                <a href="/" class="logo-footer">
+                    <img loading="lazy" src="/assets/images/logo.png" height="48" alt="Logo">
+                </a>
+                <p class="mt-4 text-muted">Easy HR is simple & intuitive HR Software for SME & Enterprise. It provides HRIS records, leaves & attendance, Payroll, expenses, travel making it very easy to manage.</p>
+                
+                <h6 class="text-dark footer-head">Cities</h6>
+                <ul class="list-unstyled mb-2 mt-1">
+                    {% for city in collections.cities %}
+                        <li class="list-inline-item"><a href="{{ city.url }}" class="text-muted text-small">{{ city.data.name }}</a> {% if not loop.last %} | {% endif %} </li>
+                    {% endfor %}
+                </ul><!--end icon-->
+
+                <h6 class="text-dark footer-head">Countries</h6>
+                <ul class="list-unstyled mt-1">
+                    {% for city in collections.countries %}
+                        <li class="list-inline-item"><a href="{{ city.url }}" class="text-muted text-small">{{ city.data.name }}</a> {% if not loop.last %} | {% endif %} </li>
+                    {% endfor %}
+                </ul><!--end icon-->
+
+                {% include "components/social.njk" %}
+            </div><!--end col-->
+            
+            <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <h5 class="text-dark footer-head">Key Features</h5>
+                <ul class="list-unstyled footer-list mt-4">
+                    {% for feature in collections.features %}
+                        {% if feature.data.showOnHomePage %}
+                            <li><a href="{{feature.url}}" class="text-muted"><i class="uil uil-angle-right-b me-1"></i> {{feature.data.title}}</a></li>        
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+
+                <h5 class="text-dark footer-head mt-3 ">Other Links</h5>
+                <ul class="list-unstyled footer-list mt-2">
+                    {% for landing in collections.landing %}
+                        <li><a href="{{ landing.url }}" class="text-muted"><i class="uil uil-angle-right-b me-1"></i> {{ landing.data.title }}</a></li>
+                    {% endfor %}
+                </ul>
+
+            </div><!--end col-->
+            
+            <div class="col-lg-2 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <h5 class="text-dark footer-head ">Company</h5>
+                <ul class="list-unstyled footer-list mt-4">
+                    <li><a href="/company/about" class="text-muted"><i class="uil uil-angle-right-b me-1"></i> About us</a></li>
+                    <li><a href="/pricing/" class="text-muted"><i class="uil uil-angle-right-b me-1"></i> Pricing</a></li>
+                    <li><a href="/features/" class="text-muted"><i class="uil uil-angle-right-b me-1"></i> Features</a></li>
+                    <li><a href="/industries/" class="text-muted"><i class="uil uil-angle-right-b me-1"></i> Industries</a></li>
+                    <li><a href="/blog/" class="text-muted"><i class="uil uil-angle-right-b me-1"></i> Blog</a></li>
+                </ul>
+
+                <h5 class="text-dark footer-head mt-3 ">Useful Links</h5>
+                <ul class="list-unstyled footer-list mt-2">
+                    <li><a href="/terms-of-services" class="text-muted"><i class="uil uil-angle-right-b me-1"></i> Terms of Services</a></li>
+                    <li><a href="/privacy-policy" class="text-muted"><i class="uil uil-angle-right-b me-1"></i> Privacy Policy</a></li>
+                </ul>
+
+                
+                
+            </div><!--end col-->
+
+            <div class="col-lg-3 col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+
+                <h5 class="text-dark footer-head">Industries </h5>
+                <ul class="list-unstyled footer-list mt-4">
+                {% for industry in collections.industries %}
+                    <li><a href="{{industry.url}}" class="text-muted"><i class="uil uil-angle-right-b me-1"></i> {{industry.data.title}}</a></li>
+                {% endfor %}
+                </ul>
+                
+                <h5 class="text-dark footer-head mt-3">Newsletter</h5>
+                <p class="mt-4 text-muted">Sign up and receive the latest tips via email.</p>
+                <form action="https://easyhrworld.us7.list-manage.com/subscribe/post?u=1d98cd0a659fc1db0dae40c9b&amp;id=c0c9b45f9c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                    <div id="mc_embed_signup_scroll">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="mc_embed_signup" class="foot-subscribe foot-white mb-3">
+                                
+                                <div class="mc-field-group">
+                                <label class="text-muted form-label" for="mce-EMAIL">Your email <span class="text-danger">*</span></label>
+                                </label>
+                                    <div class="form-icon position-relative">
+                                        <i data-feather="mail" class="fea icon-sm icons"></i>
+                                        <input type="email" value="" name="EMAIL" class="required form-control bg-light border ps-5 rounded " id="mce-EMAIL" placeholder="Your email : " required>
+                                    </div>
+                                </div>
+                                    <div id="mce-responses" class="clear">
+                                        <div class="response" id="mce-error-response" style="display:none"></div>
+                                        <div class="response" id="mce-success-response" style="display:none"></div>
+                                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1d98cd0a659fc1db0dae40c9b_c0c9b45f9c" tabindex="-1" value=""></div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="d-grid">
+                                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end container-->
+</footer><!--end footer-->
+<footer class="footer footer-bar">
+    <div class="container text-center">
+        <div class="row align-items-center">
+            <div class="col-sm-12">
+                <div class="text-sm-center">
+                    <p class="mb-0">&copy {% year %} EasyHR. Design with <i class="mdi mdi-heart text-danger"></i> by <a href="https://www.streetlightsoftware.com/" rel="noopener" target="_blank" class="text-reset">Street Light Software Pvt Ltd</a>.</p>
+                </div>
+            </div><!--end col-->
+
+            
+        </div><!--end row-->
+    </div><!--end container-->
+</footer><!--end footer-->
+<!-- Footer End -->
+
+<!-- Back to top -->
+<a href="#" onclick="topFunction()" id="back-to-top" class="btn btn-icon btn-primary back-to-top"><i data-feather="arrow-up" class="icons"></i></a>
+<!-- Back to top -->
+
+<!-- javascript -->
+<script defer src="/assets/js/bootstrap.bundle.min.js"></script>
+<!-- tobii js -->
+<script defer src="/assets/js/tobii.min.js "></script>
+<!-- SLIDER -->
+<script defer src="/assets/js/tiny-slider.js "></script>
+<!-- Icons -->
+<script defer src="/assets/js/feather.min.js"></script>
+<!-- Main Js -->
+<script defer src="/assets/js/plugins.init.js"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+<script defer src="/assets/js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+
+
+{% if site.env == "production" %}
+<script src="https://embed.small.chat/T179A90J0GVC000RNZ.js" async></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RKFHSKFF92"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RKFHSKFF92');
+</script>
+{% endif %}

@@ -1,0 +1,16 @@
+node_modules/
+_site/
+.DS_Store
+
+# Ignore folders from source code editors
+.vscode
+.idea
+
+package-lock.json
+
+# Ignore build tool output, e.g. code coverage
+.nyc_output/
+coverage/
+
+# Ignore API documentation
+api-docs/

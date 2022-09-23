@@ -1,0 +1,5 @@
+{
+    "layout": "layouts/features.njk",
+    "tags": "features",
+    "backgroundUrl": "/assets/images/bg/features.jpg"
+}

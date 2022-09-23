@@ -1,0 +1,85 @@
+---
+title: HR Software for Startups
+description: Easy payroll software that is accurate, configurable and feature-packed. Get payroll done in minutes with just a click of a button.
+changeFreq: weekly
+permalink: /best-payroll-hr-software-startups/
+headerTitle: Accurate Calculation & Fast Processing
+header: A payroll system with built-in best practices that can bring you significant dividends. Stop using excel sheets for your payroll. Automate your payroll for accurate and hassle-free/stress-free month ends and payroll on time. Additionally, get statutory compliance out of the box. EasyHR is India's best cloud-based payroll software that manages all aspects of the payroll process, avoiding manual & error-prone manual calculations, and adheres to all statutory compliances.
+details:
+    - title: Payroll Components
+      description: Create earning /deduction component such as Basics, LTA, HRA, Incentives, Medical , Travel Allowance / PF / PT /ESIC etc. as per your organization policy.These components become part of your salary slip.
+      image: /assets/images/features/pay-structure.png
+    - title: Loans / Overtime / Arrears Management
+      description: Manages overtime Payment, Loans , Performance incentives , Arrears . All the parameters are master driven and can be changed with the change in business policies.
+      image: /assets/images/features/loan-salary.png
+    - title: Tax Declaration
+      description: On declaring taxes at start of the year against your CTC, System will process the TDS amount as per the declaration. Later at time of actual Investment submissions, system can calculate the balance TDS and generate Form 16.
+      image: /assets/images/features/tax-declare.png
+    - title: Salary Disbursement
+      description: EasyHR supports employee salary transfer and multiple payment methods such as cash, check , bank transfer , RTGS / NEFT with TDS Calculation.System can also generate Bank report as per requirement.
+      image: /assets/images/features/salary-dispursement.png
+    - title: Comprehensive Payroll Reports
+      description: View overall salary paid in company for a month along with various earning and deduction details. Employee wise Salary reports and various other MIS reports can also be generated.
+      image: /assets/images/features/payroll-reports.png
+    - title: Full & Final Settlement
+      description: Manage end – to – end Exit Process for Full and Final settlement for employees who have raised resignation request.System can be configured for online or offline Exit Process for processing Full and Final Settlement.
+      image: /assets/images/features/full-final.png
+---
+<!-- Hero Start -->
+<section class="bg-half bg-light d-table w-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 col-12">
+                <div class="title-heading">
+                    <span class="badge rounded-pill bg-soft-primary">Payroll Software</span>
+                    <h1 class="fw-bold mt-2 mb-3">A Complete <br> Payroll Resources Toolset</h1>
+                    <p class="para-desc text-muted">An simple & intuitive HR Payroll Software for SME & Enterprise, Provides configurable, accurate and fast payroll processing. </p>
+                    <div class="mt-4 pt-2">
+                        <a href="/demo/" class="btn btn-primary me-2">Schedule a Demo</a>
+                        <a href="/free-trial" class="btn btn-outline-primary">Free Trial</a>
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                <img src="/assets/images/home/payroll-software-india.png" class="img-fluid d-block mx-auto" alt="">
+            </div><!--end col-->
+        </div><!--end row-->
+    </div> <!--end container-->
+</section><!--end section-->
+
+{% include "components/partners-light.njk" %}
+
+<section class="section">
+    <div class="container mt-100 mt-60">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-6">
+                <img src="/assets/images/home/payroll-feature-1.jpg" class="img-fluid" alt="Payroll Software">
+            </div><!--end col-->
+
+            <div class="col-lg-7 col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <div class="section-title ms-lg-5">
+                    <h4 class="title mb-4">{{ headerTitle }}</h4>
+                    <p class="text-muted">{{ header }}</p>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div>
+    <div class="container">
+        {% for detail in  details %}
+            <div class="row align-items-center {% if not loop.first or (loop.first and header) %} mt-100 {% endif %}">
+                <div class="col-md-6 {% if loop.index % 2 ==0 %} order-1 order-md-2 {% else %} order-2 order-md-1 {% endif %} mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <div class="section-title me-lg-5">
+                        <h4 class="title mb-4">{{ detail.title }}</h4>
+                        <p class="text-muted"> {{ detail.description }} </p>
+                    </div>
+                </div>
+                <div class="col-md-6 {% if loop.index % 2 ==0 %} order-2 order-md-1 {% else %} order-1 order-md-2 {% endif %} ">
+                    <img loading="lazy" src="{{ detail.image }}" class="img-fluid" alt="{{ detail.title }}">
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% include "components/getting-started-form.njk" %}

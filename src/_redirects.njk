@@ -1,0 +1,13 @@
+---
+permalink: _redirects
+sitemapIgnore: true
+---
+{% for city in collections.cities %}
+/{{ city.data.title | slug }} /cities/{{ city.data.title | slug  }} 301
+{% endfor %}
+{% for post in collections.posts %}
+/{{ post.fileSlug }}  /blog/{{post.fileSlug}} 301
+{% endfor %}
+http://www.easyhrworld.com/* https://www.easyhrworld.com/:splat 301!
+https://easyhrworld.com/* https://www.easyhrworld.com/:splat 301!
+/robots.txt    /robots.txt   200

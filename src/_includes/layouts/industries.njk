@@ -1,0 +1,30 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+
+<section class="bg-half">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="section-title">
+                    <div class="text-center">
+                        <h4 class="title mb-4">{{ title }}</h4>
+                        <img src="{{featureImage}}" class="img-fluid rounded-md shadow-md" alt="">
+                    </div>
+                    
+                    <div class="content my-5">
+                        {{ content | safe }}
+                    </div>
+
+                    {% include "components/testimonials-small.njk" %}
+                    
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!--end container-->
+    {% include "components/getting-started-form.njk" %}
+</section><!--end section-->
+
+
+
+{% endblock %}

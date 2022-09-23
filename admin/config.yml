@@ -1,0 +1,95 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "/assets/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: src/blog
+    label_singular: 'Blog Post'
+    identifier_field: "title"
+    create: true
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Description", name: "description", widget: "string", required: true}
+      - {label: "Date", name: "date", widget: "datetime", required: true, date_format: YYYY-MM-DD }
+      - {label: "Feature Image", name: "featureImage", widget: "image", required: true}
+      - {label: "Tags", name: "tags", widget: "list", required: true, default: ['posts']}
+      - {label: "Categories", name: "categories", widget: "list", required: true}
+      - {label: "Hide", name: 'eleventyExcludeFromCollections', widget: "boolean", default: false, required: true}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "cities"
+    label: "Cities"
+    folder: src/cities
+    label_singular: 'City'
+    identifier_field: "title"
+    create: true
+    fields: # The fields for each document, usually in front matter
+      - {label: "Name", name: "name", widget: "string", required: true}
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Description", name: "description", widget: "string", required: true}
+      - {label: "Hide", name: 'eleventyExcludeFromCollections', widget: "boolean", default: false, required: true}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "team"
+    label: "Team"
+    folder: src/company/team
+    identifier_field: "name"
+    create: true
+    fields:
+      - {label: "Name", name: "name", widget: "string", required: true}
+      - {label: "Designation", name: "designation", widget: "string", required: true}
+      - {label: "Image", name: "image", widget: "image", required: true}
+      - {label: "Twitter", name: "twitter", widget: "string"}
+      - {label: "LinkedIn", name: "linkedin", widget: "string"}
+      - {label: "Facebook", name: "facebook", widget: "string"}
+      - {label: "Instagram", name: "instagram", widget: "string"}
+      - {label: "Hide", name: 'eleventyExcludeFromCollections', widget: "boolean", default: false, required: true}
+  - name: "customer"
+    label: "Customers"
+    folder: src/customers
+    identifier_field: "title"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Logo Image", name: "image", widget: "image", required: true}
+      - {label: "Show on Home Page", name: 'showOnHomePage', widget: "boolean", default: false, required: true}
+  - name: "features"
+    label: "Features"
+    label_singular: 'Feature'
+    folder: src/features
+    identifier_field: "title"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Description", name: "description", widget: "string", required: true}
+      - {label: "Icon", name: "icon", widget: "string", required: true}
+      - {label: "Show on Home Page", name: 'showOnHomePage', widget: "boolean", default: false, required: true}
+      - {label: "Show on Menu", name: 'showOnMenu', widget: "boolean", default: true, required: true}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "industries"
+    label: "Industries"
+    folder: src/industries
+    identifier_field: "title"
+    label_singular: 'Industry'
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Description", name: "description", widget: "string", required: true}
+      - {label: "Icon", name: "icon", widget: "string", required: true}
+      - {label: "Show on Home Page", name: 'showOnHomePage', widget: "boolean", default: false, required: true}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Testimonials"
+    label: "Testimonials"
+    folder: src/testimonials
+    identifier_field: "name"
+    label_singular: 'Testimonial'
+    create: true
+    fields:
+      - {label: "Name", name: "name", widget: "string", required: true}
+      - {label: "Designation", name: "designation", widget: "string", required: true}
+      - {label: "Company", name: "company", widget: "string", required: true}
+      - {label: "Image", name: "image", widget: "image", required: true}
+      - {label: "Show on Home Page", name: 'showOnHomePage', widget: "boolean", default: false, required: true}
+      - {label: "Body", name: "body", widget: "markdown"}
