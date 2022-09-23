@@ -1,7 +1,8 @@
 ---
 title: What is HR Software and How to choose the one best suited for your company?
 description: We evaluate the best 5 payroll software in India and how to choose one that is best for your organization.
-eleventyExcludeFromCollections: true
+date: 2022-09-23
+featureImage: /assets/images/blog/hr-software-scaled.webp
 category:
     - Payroll Software
     - HR Software
@@ -19,7 +20,7 @@ HR Software provides a single platform for all the HR related activities of an o
 
 HR Software is important for an organization because it helps in automating the HR processes and helps in managing the employees and their data. It also helps in managing the payroll and attendance of the employees. It is a one-stop solution for all the HR related activities of an organization. It helps in reducing the manual work and saves a lot of time and effort. It also helps in reducing the cost of the organization.
 
-### How to choose the best HR Software?
+## How to choose the best HR Software?
 There are many factors that you need to consider while choosing the best HR Software for your organization. Some of the factors are:
 
 * **Cost**
@@ -34,15 +35,14 @@ There are many factors that you need to consider while choosing the best HR Soft
     * [Payroll](https://www.easyhrworld.com/features/payroll-software-india/)
     * [Employee Self Service](https://www.easyhrworld.com/features/employee-self-service/)
     * [Leaves and Attendance](https://www.easyhrworld.com/features/leave-management-software-india/)
-    * [Work from Home](https://www.easyhrworld.com/features/work-from-home/)
-    * Timesheet
-    * Policies Documents and Forms Management
+    * Work from Home
+    * [Timesheet](https://www.easyhrworld.com/features/timesheet/)
+    * [Policies Documents and Forms Management](https://www.easyhrworld.com/features/document-management/)
     * Communication and Notifications
-    * Helpdesk
-    * Outdoor Duty
-    * Travel Management
+    * [Helpdesk](https://www.easyhrworld.com/features/helpdesk/)
+    * [Travel Management & Outdoor Duty](https://www.easyhrworld.com/features/travel/)
     * Task Management
-    * Recruitment
+    * [Recruitment](https://www.easyhrworld.com/features/recruitment/)
   
 * **Ease of Use** 
   
