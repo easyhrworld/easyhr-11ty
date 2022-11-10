@@ -1,7 +1,7 @@
 ---
 title: What is the use of HR Software?
 description: We look at the multiple payroll software to figureout the easiest payroll software to use.
-featureImage: /assets/images/blog/hr-sotftware-expectations.jpg
+featureImage: /assets/images/blog/hr-software-use.jpg
 date: 2022-11-10
 category:
   - "general"
