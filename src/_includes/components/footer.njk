@@ -57,8 +57,14 @@
 
                 <h5 class="text-dark footer-head mt-3 ">Useful Links</h5>
                 <ul class="list-unstyled footer-list mt-2">
-                    <li><a href="/terms-of-services" class="text-muted"><i class="uil uil-angle-right-b me-1"></i> Terms of Services</a></li>
-                    <li><a href="/privacy-policy" class="text-muted"><i class="uil uil-angle-right-b me-1"></i> Privacy Policy</a></li>
+                    <li><a href="/terms-of-services" class="text-muted"> Terms of Services</a></li>
+                    <li><a href="/privacy-policy" class="text-muted"> Privacy Policy</a></li>
+                </ul>
+
+                <h5 class="text-dark footer-head mt-3 ">Sales</h5>
+                <ul class="list-unstyled footer-list mt-2">
+                    <li><a href="tel:+91-73041-28920" class="text-muted">+91-73041-28920</a></li>
+                    <li><a href="tel:+91-99302-05985" class="text-muted">+91-99302-05985</a></li>
                 </ul>
 
                 
@@ -70,7 +76,7 @@
                 <h5 class="text-dark footer-head">Industries </h5>
                 <ul class="list-unstyled footer-list mt-4">
                 {% for industry in collections.industries %}
-                    <li><a href="{{industry.url}}" class="text-muted"><i class="uil uil-angle-right-b me-1"></i> {{industry.data.title}}</a></li>
+                    <li><a href="{{industry.url}}" class="text-muted"> {{industry.data.title}}</a></li>
                 {% endfor %}
                 </ul>
                 
