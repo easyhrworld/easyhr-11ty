@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["website", "11ty", "easyhr"],
+  "keywords": [
+    "website",
+    "11ty",
+    "easyhr"
+  ],
   "author": "Street Light Software Pvt Ltd",
   "license": "ISC",
   "devDependencies": {
