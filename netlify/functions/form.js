@@ -6,8 +6,7 @@ const ZOHO_REFRESH_TOKEN = process.env.ZOHO_REFRESH_TOKEN;
 const ZOHO_CLIENT_ID = process.env.ZOHO_CLIENT_ID;
 const ZOHO_CLIENT_SECRET = process.env.ZOHO_CLIENT_SECRET;
 const ZOHO_ACCOUNT_OWNER = process.env.ZOHO_ACCOUNT_OWNER;
-const AUTH_END_POINT =
-  `https://accounts.zoho.com/oauth/v2/token?refresh_token=${ZOHO_REFRESH_TOKEN}&client_id=${ZOHO_CLIENT_ID}&client_secret=${ZOHO_CLIENT_SECRET}&grant_type=refresh_token`;
+const AUTH_END_POINT = `https://accounts.zoho.com/oauth/v2/token?refresh_token=${ZOHO_REFRESH_TOKEN}&client_id=${ZOHO_CLIENT_ID}&client_secret=${ZOHO_CLIENT_SECRET}&grant_type=refresh_token`;
 
 exports.handler = async function (event, context, callback) {
   // Only allow POST
@@ -17,31 +16,56 @@ exports.handler = async function (event, context, callback) {
 
   console.log(event.body);
 
-  const params = JSON.parse(event.body)
+  const params = JSON.parse(event.body);
 
-  console.log( params );
+  console.log(params);
 
   const formdata = getFormData(params);
 
-  console.log({formdata});
+  console.log({ formdata });
 
   const postBody = {
     data: [formdata],
   };
 
   const response = await saveToZoho(postBody);
+  const airtableResponse = await sendToAirtable(params);
 
-  console.log(response);
+  console.log(response, airtableResponse);
 
   // accept form data
   // const body = JSON.parse(event.body).payload
 
   return {
     statusCode: 201,
-    body: JSON.stringify({success: true})
+    body: JSON.stringify({ success: true }),
+  };
+};
+
+async function sendToAirtable(params) {
+  const body = {
+    name: params.data.name,
+    email: params.data.email,
+    phone: params.data.phone,
+    company: params.data.company,
+    city: params.data.city,
+    country: params.data.country,
+    requirements: params.data.requirements,
+    empcount: params.data.empcount,
   };
 
-};
+  const response = await axios.post(
+    "https://hooks.airtable.com/workflows/v1/genericWebhook/app3takXUa8pF69Jq/wfl93m9wlUHlDVP8Y/wtrGnOZRmTNruA2f7",
+    body,
+    {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  return response.data;
+}
 
 async function saveToZoho(postBody) {
   const auth_details = await axios.post(encodeURI(AUTH_END_POINT));
@@ -50,7 +74,7 @@ async function saveToZoho(postBody) {
     Authorization: "Zoho-oauthtoken " + auth_details.data.access_token,
   };
 
-  console.log({header});
+  console.log({ header });
 
   const response = await axios.post(END_POINT, postBody, { headers: header });
   return response.data;
