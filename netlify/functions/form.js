@@ -81,6 +81,7 @@ function getFormData(params) {
       Email: params.data.email,
       Phone: params.data.phone,
       Description: params.data.message,
+      Company: params.data.company,
       City: params.data.city,
       Country: params.data.country,
       Description: params.data.requirements,
