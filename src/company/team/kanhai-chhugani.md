@@ -7,5 +7,6 @@ twitter: https://twitter.com/kanhaic
 linkedin: https://linkedin.com/in/kanhaic/
 facebook: https://www.facebook.com/kanhaic
 instagram: https://www.instagram.com/kanhaic/
-date: 2010-09-01
+date: 2002-09-01
+seq: 2
 ---

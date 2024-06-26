@@ -5,7 +5,7 @@ layout: layouts/simple.njk
 
 # Terms of Service
 
-THIS IS AN AGREEMENT BETWEEN YOU OR THE ENTITY THAT YOU REPRESENT (hereinafter “You” or “Your”) AND STREET LIGHT SOFTWARE PVT. LTD. (hereinafter “Street Light”) GOVERNING YOUR USE OF EASY HR SOFTWARE (hereinafter “Street Light Service(s)”).
+THIS IS AN AGREEMENT BETWEEN YOU OR THE ENTITY THAT YOU REPRESENT (hereinafter “You” or “Your”) AND Crafting HR Software Solutions  PVT. LTD. (hereinafter “Street Light”) GOVERNING YOUR USE OF EASY HR SOFTWARE (hereinafter “Street Light Service(s)”).
 
 ## Parts of this Agreement
 This Agreement consists of the following terms and conditions (hereinafter the “General Terms”) and terms and conditions, if any, specific to use of individual Services (hereinafter the “Service Specific Terms”). The General Terms and Service Specific Terms are collectively referred to as the “Terms”. In the event of a conflict between the General Terms and Service Specific Terms, the Service Specific Terms shall prevail.
@@ -34,7 +34,7 @@ If you provide any information that is untrue, inaccurate, outdated, or incomple
 ## Personal Information and Privacy
 Personal information you provide to Street Light through the Service is governed by Street Light Privacy Policy. Your election to use the Service indicates your acceptance of the terms of the Street Light Privacy Policy. You are responsible for maintaining confidentiality of your username, password and other sensitive information. You are responsible for all activities that occur in your user account and you agree to inform us immediately of any unauthorized use of your user account by email to support@easyhrworld.com. We are not responsible for any loss or damage to you or to any third party incurred as a result of any unauthorized access and/or use of your user account, or otherwise.
 
-## Communications from Street Light Software
+## Communications from Crafting HR Software Solutions 
 The Service may include certain communications from Street Light, such as service announcements, administrative messages and newsletters. You understand that these communications shall be considered part of using the Services. As part of our policy to provide you total privacy, we also provide you the option of opting out from receiving newsletters from us. However, you will not be able to opt-out from receiving service announcements and administrative messages.
 
 ## Fees and Payments
@@ -64,7 +64,7 @@ You may transmit or publish content created by you using any of the Services or 
 Street Light may provide sample files and applications for the purpose of demonstrating the possibility of using the Services effectively for specific purposes. The information contained in any such sample files and applications consists of random data. Street Light makes no warranty, either express or implied, as to the accuracy, usefulness, completeness or reliability of the information or the sample files and applications.
 
 ## Trademark
-Street Light, Street Light logo, Easy HR logo, the names of individual Services and their logos are trademarks of STREET LIGHT SOFTWARE PVT. LTD. You agree not to display or use, in any manner, the Street Light trademarks, without Street Light’s prior permission.
+Street Light, Street Light logo, Easy HR logo, the names of individual Services and their logos are trademarks of Crafting HR Software Solutions  PVT. LTD. You agree not to display or use, in any manner, the Street Light trademarks, without Street Light’s prior permission.
 
 ## Disclaimer of Warranties
 YOU EXPRESSLY UNDERSTAND AND AGREE THAT THE USE OF THE SERVICES IS AT YOUR SOLE RISK. THE SERVICES ARE PROVIDED ON AN AS-IS-AND-AS-AVAILABLE BASIS. STREET LIGHT EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. STREET LIGHT MAKES NO WARRANTY THAT THE SERVICES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR VIRUS FREE. USE OF ANY MATERIAL DOWNLOADED OR OBTAINED THROUGH THE USE OF THE SERVICES SHALL BE AT YOUR OWN DISCRETION AND RISK AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM, MOBILE TELEPHONE, WIRELESS DEVICE OR DATA THAT RESULTS FROM THE USE OF THE SERVICES OR THE DOWNLOAD OF ANY SUCH MATERIAL. NO ADVICE OR INFORMATION, WHETHER WRITTEN OR ORAL, OBTAINED BY YOU FROM STREET LIGHT, ITS EMPLOYEES OR REPRESENTATIVES SHALL CREATE ANY WARRANTY NOT EXPRESSLY STATED IN THE TERMS.

@@ -7,4 +7,6 @@ twitter:
 linkedin: https://linkedin.com/in/shripalshah125/
 facebook: 
 instagram: 
+date: 2001-09-01
+seq: 1
 ---

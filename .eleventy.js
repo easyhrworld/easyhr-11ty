@@ -33,6 +33,13 @@ function getAllKeyValues(collectionArray, key) {
   return allValues;
 }
 
+function sortBySeq(values) {
+  let vals = [...values];
+  vals.sort((a, b) => {
+    return a.data.seq - b.data.seq;
+  });
+}
+
 /**
  * Transform a string into a slug
  * Uses slugify package
@@ -75,6 +82,8 @@ module.exports = function (eleventyConfig) {
 
     return blogCategories;
   });
+
+  eleventyConfig.addFilter("sortBySeq", sortBySeq);
 
   eleventyConfig.addCollection("blogTags", function (collection) {
     let allTags = getAllKeyValues(
