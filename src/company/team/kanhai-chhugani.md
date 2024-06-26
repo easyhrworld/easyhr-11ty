@@ -2,7 +2,7 @@
 eleventyExcludeFromCollections: false
 name: "Kanhai Chhugani"
 image: "/assets/images/team/kanhai-chhugani.jpg"
-designation: "Managing Director"
+designation: "CTO"
 twitter: https://twitter.com/kanhaic
 linkedin: https://linkedin.com/in/kanhaic/
 facebook: https://www.facebook.com/kanhaic
