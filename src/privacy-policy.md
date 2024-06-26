@@ -26,7 +26,7 @@ For the purposes of this Privacy Policy:
 - __Application__ means the software program provided by the Company downloaded by You on any electronic device, named EasyHR
 
 
-- __Company__ (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Crafting HR Software Solutions  Pvt Ltd, FC 3/4 Karma Stambh LBS Marg Vikhroli West Mumbai 400083.
+- __Company__ (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Crafting HR Software Solutions LLP, FC 3/4 Karma Stambh LBS Marg Vikhroli West Mumbai 400083.
 
 
 

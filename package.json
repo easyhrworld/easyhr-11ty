@@ -12,7 +12,7 @@
     "11ty",
     "easyhr"
   ],
-  "author": "Crafting HR Software Solutions  Pvt Ltd",
+  "author": "Crafting HR Software Solutions LLP",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
@@ -20,6 +20,7 @@
     "clean-css": "^5.1.2",
     "eleventy-plugin-date": "^1.0.0",
     "lodash": "^4.17.21",
+    "netlify-plugin-submit-sitemap": "^0.4.0",
     "purgecss": "^4.0.3",
     "slugify": "^1.5.3",
     "terser": "^5.7.0"
